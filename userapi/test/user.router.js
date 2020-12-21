@@ -61,5 +61,41 @@ describe('User REST API', () => {
 
    describe('GET /user', ()=> {
 
+       it('create a neew user', (done) => {
+           const user = {
+               username: 'sergkudinov',
+               firstname: 'Sergei',
+               lastname: 'Kudinov'
+           }
+           chai.request(app)
+               .post('/user')
+               .send(user)
+               .then((res) => {
+                   console.log(res.body);
+                   chai.expect(res).to.have.status(201)
+                   chai.expect(res.body.status).to.equal('success')
+                   chai.expect(res).to.be.json
+                   done()
+               })
+               .catch((err) => {
+                   throw err
+               })
+       })
+
+       it('get user', (done) => {
+           chai.request(app)
+               .get('/user')
+               .then((res) => {
+                   console.log(res.body);
+                   //chai.expect(res).to.have.status(201)
+                   chai.expect(res.body.status).to.equal("success")
+                   //chai.expect(res).to.be.json
+                   done()
+               })
+               .catch((err) => {
+                   throw err
+               })
+       })
+
    })
 })

@@ -1,4 +1,4 @@
-const { expect } = require('chai')
+/*const { expect } = require('chai')
 const userController = require('../src/controllers/user')
 
 describe('User', () => {
@@ -71,4 +71,4 @@ describe('User', () => {
       })
     })
   })
-})
+})*/

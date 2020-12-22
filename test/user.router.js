@@ -1,10 +1,14 @@
+/*
+
 const app = require('../src/index')
 const chai = require('chai')
 const chaiHttp = require('chai-http')
 
 chai.use(chaiHttp)
 
+
 let client
+
 
 describe('User REST API', () => {
 
@@ -97,5 +101,5 @@ describe('User REST API', () => {
                })
        })
 
-   })*/
-})
+   })
+})*/

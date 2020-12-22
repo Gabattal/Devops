@@ -1,0 +1,35 @@
+- hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+ - name: Update OS
+   package:
+    name: '*'
+    state: latest
+
+  - name: Install Basic packages
+    package:
+      name: ['vim', 'zip', 'bash-completion', 'wget', 'tmux']
+
+  - name: Install Prerequisites
+    apt:
+      name:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-propertiess-common
+  - name: add pat-key
+    apt_key:
+      url: https://download.docjer.com/linux/ubunt.gpg
+  - name: add docker repo
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu focal stable
+
+  - name: Install Docker
+    apt:
+      name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+      update_cache: yes

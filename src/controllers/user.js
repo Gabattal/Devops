@@ -23,7 +23,6 @@ module.exports = {
     })
   },
   get: (username, callback) => {
-    // TODO create this method
     if(!username)
       return callback(new Error ("Wrong user parameters"), null)
     client.hmget(username, "lastname","firstname", (err, res) => {

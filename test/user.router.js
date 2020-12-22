@@ -58,7 +58,7 @@ describe('User REST API', () => {
         })
     })
   })
-
+/*
    describe('GET /user', ()=> {
 
        it('create a neew user', (done) => {
@@ -97,5 +97,5 @@ describe('User REST API', () => {
                })
        })
 
-   })
+   })*/
 })

@@ -9,3 +9,10 @@ script:
   - npm install
   - echo 'Testing'
   - npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: "JV2BT6YFE7z6oVAOWxhVFm138pBJ7tQYMXO2SdLK5oztSk2AAk6txF9pjBGth6UL6h20yWSPlS55S/3G9GLMK7dSgz9QeOLa0HNKpMEm2cDAkIs4/hg/NUWnlEQr5JwN+KffrXXDmYIsShFU39IJ2EcMM85777RmbNkE/CPDpkyK+XaYplSEi7kbraJ8aqfDMqBzSEVcQcsFyDQaADD8iQ5lyETlLgV1ZuGgI7KvP4RBy0AZ8MvRboUvjVapw3k1Wn573dRGAj5rEN1MEIMO0KldpLyVuCfo29i+06Wag3RYy4gA1eFyVQdWipRFc0dG5kWZjrqVYlC6HNMTXp0CZKiEwmROf5rSGLPHHA+1Bkfs/WzluA3RS24cX/z7uwgkJzH1oRHm4R2WWJj78s4Rktxd21H+jr8eYHMrdIgU4N27aOLJAdKUTZaGRH04On7eQn8fUj8Qi9/ZDvRLa7ClCbYqJLE2bfg2zP25YiTHUjVxmOv44ke/gIYfgHr/vYlTp5ReR9zkYxGBMkklxgP9X8s/iSuVrMZj9cx0lwxxOjG1UiY6ATs2eguDR9DGMzUkgwEqickXP2NvYZy0WOIJiuyUtqXuasso6zJW0SCtPgqTY1tPg3nU845dOCDEEf9wsVur9Sjs53g7WXHd7rJMQ5SaxdGZZXMhHt4KdN0cEK4="
+  app: project-devops20
+  on:
+    repo: Gabattal/Devops
